@@ -3,14 +3,22 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="Sílabas" />
 <meta name="theme-color" content="#1B2559" />
+<meta name="format-detection" content="telephone=no" />
+
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAAKjklEQVR4nO3dPa5dZxmG4WMUMQFokJs0RkqVioYWD4AOPAA6pEiMwFOIxAyQUEo3dNCCRJcZpGMAdFQUsZz4R+fstfb6+b51X1eZwmcr3uu993Ns6zx7/uLVAwA9Pzn7BQBwDgEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAICoz85+AaP71xcv9vvFf/HNHz/4L//7x6/3+3K/+/ff9vvF3/nvF18f8FX+8s3PD/gqP/vDXw/4KrXfl4/f9v/5/Z8XfZVFvy+//NOvFv3iKQJwqI/f+sAHz8XSHrCaABzB3YfbvXtelGBvArAvpx9W+/7xkYH9CMBenH7YhAzsRwC25/TD5mRgD/4a6MZcf9iP52tbArAl707Ym6dsQ74FtA1vSjjMT3/zz4ed/9FMhAWwAdcfjvd9BriHANzL9YezaMCdBOAurj+cSwPuIQDruf4wAg1YTQBWcv1hHBqwjgAARAnAGj7+w2iMgBUEYDHXH8akAUsJwDKuP4xMAxYRAIAoAVjAx38YnxFwOwEAiBKAW/n4D7MwAm4kAABRz56/eHX2a5jAd99+ffZLAJb5/Muvzn4Jo7MAAKIEACBKAJ7m+z8wI0/ukwQAIEoAAKIEACBKAACiBOAJ/hwJ5uX5fZwAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlADAWy/fvD77JcChBAB+oAGkCAC85+Wb1zJAhADAJ2gABQIAn2YKcHkCAI/RAC5MAOAJpgBXJQBwEw3gegQAbmUKcDECAMtoAJchALCYKcA1CACspAHMTgBgPVOAqQkA3EsDmJQAwAZMAWYkALAZDWAuAgBbMgWYiADA9jSAKQgA7MIUYHwCADvSAEYmALAvU4BhCQAcQQMYkADAQUwBRiMAcCgNYBwCAEczBRiEAMA5NIDTCQCcxhTgXAIAJ9MAziIAcD5TgFMIAIxCAziYAMBATAGOJAAwHA3gGAIAIzIFOIAAwLg0gF0JAAzNFGA/AgAT0AD2IAAwB1OAzQkAzEQD2JAAwGRMAbYiADAlDeB+AgCzMgW4kwDA3DSA1QQApmcKsM5nZ78Arsk9Ot7LN6///tvXZ78KZmIBwHWYAiwiAHA1GsCNBAAuyBTgFgIAl6UBPE4A4MpMAR4hAHB9GsAnCQAkmAJ8TAAgRAP4MQGAFlOAdwQAijSABwGALFMAAYA0DSgTAKgzBbIEAHh4MAWSBAB4yxSoEQDgPRrQIQDAh0yBCD8RDPiQnywWYQEA73H9OywA4C2nv8YCAB4eXP8kCwDqnP4sCwDSXP8yCwCinH4sAChy/XmwAKDG6ecdCwBCXH9+zAKABKefj1kAcH2uP59kAcCVOf08wgKAy3L9eZwFABfk9HMLCwCuxvXnRhYAXIfTzyICwC5mvESz/wysGf+fcy4BgOk5/azjzwBgbq4/q1kAMCunnztZADAl15/7WQAwGaefrVgAMBPXnw1ZADAHp5/NWQAwAdefPVgAMDSnn/1YADAu159dWQAwIqefA1gAMBzXn2NYADAQp58jWQAwCtefg1kAcD6nn1NYAHAy15+zWABwGqefc1kAcA7Xn9NZAHA0p59BWABwKNefcVgAcBCnn9FYAHAE158BWQCwL6efYVkAsCPXn5FZALALp5/xWQCwPdefKVgAsCWnn4lYALAZ15+5WACwAaefGVkAcC/Xn0lZALCe08/ULABYyfVndhYALOb0cw0WACzj+nMZFgDcyunnYiwAuInrz/VYAPAEp5+rsgDgMa4/F2YBwKc5/VyeBQCf4PpTYAHAe5x+OiwA+IHrT4oAwFuuPzUCABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAvCEz7/86uyXAKzk+X2cAABECQBAlAAARAkAQJQAPM2fI8GMPLlPEgCAKAEAiBKAm9iSMBfP7C0EACBKAG7lAwXMwtN6IwEAiBKABXysgPF5Tm8nAABRArCMDxcwMk/oIgKwmHcYjMmzuZQArOF9BqPxVK4gAABRArCSjxswDs/jOgKwnvccjMCTuJoA3MU7D87lGbyHANzL+w/O4um7kwBswLsQjue5u9+z5y9enf0aruO7b78++yXA9Tn9W7EAtuR9CXvzlG1IADbm3Qn78Xxty7eA9uLbQbAhp38PArAvGYA7Of37EYAjyACs4PTvTQAOpQTwJHf/MAJwJj2ABxf/PAIAEOWvgQJECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBA1P8B+XdutKVx3DEAAAAASUVORK5CYII=" />
+<link rel="icon" href="data:image/png;base64,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nw1ZADAHp5/NWQAwAdefPVgAMDSnn/1YADAu159dWQAwIqefA1gAMBzXn2NYADAQp58jWQAwCtefg1kAcD6nn1NYAHAy15+zWABwGqefc1kAcA7Xn9NZAHA0p59BWABwKNefcVgAcBCnn9FYAHAE158BWQCwL6efYVkAsCPXn5FZALALp5/xWQCwPdefKVgAsCWnn4lYALAZ15+5WACwAaefGVkAcC/Xn0lZALCe08/ULABYyfVndhYALOb0cw0WACzj+nMZFgDcyunnYiwAuInrz/VYAPAEp5+rsgDgMa4/F2YBwKc5/VyeBQCf4PpTYAHAe5x+OiwA+IHrT4oAwFuuPzUCABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAvCEz7/86uyXAKzk+X2cAABECQBAlAAARAkAQJQAPM2fI8GMPLlPEgCAKAEAiBKAm9iSMBfP7C0EACBKAG7lAwXMwtN6IwEAiBKABXysgPF5Tm8nAABRArCMDxcwMk/oIgKwmHcYjMmzuZQArOF9BqPxVK4gAABRArCSjxswDs/jOgKwnvccjMCTuJoA3MU7D87lGbyHANzL+w/O4um7kwBswLsQjue5u9+z5y9enf0aruO7b78++yXA9Tn9W7EAtuR9CXvzlG1IADbm3Qn78Xxty7eA9uLbQbAhp38PArAvGYA7Of37EYAjyACs4PTvTQAOpQTwJHf/MAJwJj2ABxf/PAIAEOWvgQJECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBA1P8B+XdutKVx3DEAAAAASUVORK5CYII=" />
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22S%5Cu00edlabas%20%5Cu2014%20Cartilla%20de%20lectura%22%2C%20%22short_name%22%3A%20%22S%5Cu00edlabas%22%2C%20%22start_url%22%3A%20%22.%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22orientation%22%3A%20%22landscape%22%2C%20%22background_color%22%3A%20%22%231B2559%22%2C%20%22theme_color%22%3A%20%22%231B2559%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAAKjklEQVR4nO3dPa5dZxmG4WMUMQFokJs0RkqVioYWD4AOPAA6pEiMwFOIxAyQUEo3dNCCRJcZpGMAdFQUsZz4R%2Bfstfb6%2Bb51X1eZwmcr3uu993Ns6zx7/uLVAwA9Pzn7BQBwDgEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAIAoAQCIEgCAKAEAiBIAgCgBAIgSAICoz85%2BAaP71xcv9vvFf/HNHz/4L//7x6/3%2B3K/%2B/ff9vvF3/nvF18f8FX%2B8s3PD/gqP/vDXw/4KrXfl4/f9v/5/Z8XfZVFvy%2B//NOvFv3iKQJwqI/f%2BsAHz8XSHrCaABzB3YfbvXtelGBvArAvpx9W%2B/7xkYH9CMBenH7YhAzsRwC25/TD5mRgD/4a6MZcf9iP52tbArAl707Ym6dsQ74FtA1vSjjMT3/zz4ed/9FMhAWwAdcfjvd9BriHANzL9YezaMCdBOAurj%2BcSwPuIQDruf4wAg1YTQBWcv1hHBqwjgAARAnAGj7%2Bw2iMgBUEYDHXH8akAUsJwDKuP4xMAxYRAIAoAVjAx38YnxFwOwEAiBKAW/n4D7MwAm4kAABRz56/eHX2a5jAd99%2BffZLAJb5/Muvzn4Jo7MAAKIEACBKAJ7m%2Bz8wI0/ukwQAIEoAAKIEACBKAACiBOAJ/hwJ5uX5fZwAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlADAWy/fvD77JcChBAB%2BoAGkCAC85%2BWb1zJAhADAJ2gABQIAn2YKcHkCAI/RAC5MAOAJpgBXJQBwEw3gegQAbmUKcDECAMtoAJchALCYKcA1CACspAHMTgBgPVOAqQkA3EsDmJQAwAZMAWYkALAZDWAuAgBbMgWYiADA9jSAKQgA7MIUYHwCADvSAEYmALAvU4BhCQAcQQMYkADAQUwBRiMAcCgNYBwCAEczBRiEAMA5NIDTCQCcxhTgXAIAJ9MAziIAcD5TgFMIAIxCAziYAMBATAGOJAAwHA3gGAIAIzIFOIAAwLg0gF0JAAzNFGA/AgAT0AD2IAAwB1OAzQkAzEQD2JAAwGRMAbYiADAlDeB%2BAgCzMgW4kwDA3DSA1QQApmcKsM5nZ78Arsk9Ot7LN6///tvXZ78KZmIBwHWYAiwiAHA1GsCNBAAuyBTgFgIAl6UBPE4A4MpMAR4hAHB9GsAnCQAkmAJ8TAAgRAP4MQGAFlOAdwQAijSABwGALFMAAYA0DSgTAKgzBbIEAHh4MAWSBAB4yxSoEQDgPRrQIQDAh0yBCD8RDPiQnywWYQEA73H9OywA4C2nv8YCAB4eXP8kCwDqnP4sCwDSXP8yCwCinH4sAChy/XmwAKDG6ecdCwBCXH9%2BzAKABKefj1kAcH2uP59kAcCVOf08wgKAy3L9eZwFABfk9HMLCwCuxvXnRhYAXIfTzyICwC5mvESz/wysGf%2Bfcy4BgOk5/azjzwBgbq4/q1kAMCunnztZADAl15/7WQAwGaefrVgAMBPXnw1ZADAHp5/NWQAwAdefPVgAMDSnn/1YADAu159dWQAwIqefA1gAMBzXn2NYADAQp58jWQAwCtefg1kAcD6nn1NYAHAy15%2BzWABwGqefc1kAcA7Xn9NZAHA0p59BWABwKNefcVgAcBCnn9FYAHAE158BWQCwL6efYVkAsCPXn5FZALALp5/xWQCwPdefKVgAsCWnn4lYALAZ15%2B5WACwAaefGVkAcC/Xn0lZALCe08/ULABYyfVndhYALOb0cw0WACzj%2BnMZFgDcyunnYiwAuInrz/VYAPAEp5%2BrsgDgMa4/F2YBwKc5/VyeBQCf4PpTYAHAe5x%2BOiwA%2BIHrT4oAwFuuPzUCABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAvCEz7/86uyXAKzk%2BX2cAABECQBAlAAARAkAQJQAPM2fI8GMPLlPEgCAKAEAiBKAm9iSMBfP7C0EACBKAG7lAwXMwtN6IwEAiBKABXysgPF5Tm8nAABRArCMDxcwMk/oIgKwmHcYjMmzuZQArOF9BqPxVK4gAABRArCSjxswDs/jOgKwnvccjMCTuJoA3MU7D87lGbyHANzL%2Bw/O4um7kwBswLsQjue5u9%2Bz5y9enf0aruO7b78%2B%2ByXA9Tn9W7EAtuR9CXvzlG1IADbm3Qn78Xxty7eA9uLbQbAhp38PArAvGYA7Of37EYAjyACs4PTvTQAOpQTwJHf/MAJwJj2ABxf/PAIAEOWvgQJECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBA1P8B%2BXdutKVx3DEAAAAASUVORK5CYII%3D%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/png%22%7D%5D%7D" />
+
 <title>Sílabas — Cartilla de lectura</title>
-<link rel="icon" href="data:,">
-<style>html,body{margin:0;padding:0;background:#1B2559;}</style>
+<style>
+  html,body{margin:0;padding:0;background:#1B2559;overflow:hidden;overscroll-behavior:none;height:100%;position:fixed;inset:0;width:100%;}
+</style>
 </head>
 <body>
 <div id="root"></div>
@@ -12934,11 +12942,15 @@
 }
 
 *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
-html,body,#root{height:100%;}
-body{margin:0;}
+html,body{
+  height:100%; margin:0;
+  position:fixed; inset:0; width:100%;
+  overflow:hidden; overscroll-behavior:none;
+}
+#root{height:100%;}
 
 .app{
-  min-height:100vh; min-height:100dvh;
+  height:100%;
   background:
     radial-gradient(1200px 600px at 85% -10%, rgba(76,125,217,.25), transparent 60%),
     radial-gradient(900px 500px at 0% 110%, rgba(226,78,126,.18), transparent 55%),
@@ -12947,6 +12959,7 @@ body{margin:0;}
   color:var(--paper);
   display:flex; flex-direction:column;
   overflow:hidden;
+  overscroll-behavior:none;
   touch-action:pan-y;
 }
 
@@ -12989,6 +13002,7 @@ body{margin:0;}
 .setup{
   flex:1; display:flex; flex-direction:column; align-items:center;
   padding:6px 22px 18px; overflow:auto; gap:10px;
+  overscroll-behavior:contain; -webkit-overflow-scrolling:touch;
 }
 .setup h1{
   font-family:'Baloo 2', sans-serif; font-weight:800;
@@ -13040,6 +13054,20 @@ body{margin:0;}
 }
 .soundBtn.on small{opacity:.9;}
 
+.countBtn{
+  font-family:'Baloo 2', sans-serif; font-weight:700;
+  font-size:clamp(14px, 2.5vw, 18px);
+  padding:10px 18px; border-radius:14px;
+  border:2px solid rgba(251,246,234,.25);
+  background:rgba(251,246,234,.06); color:var(--paper);
+  cursor:pointer; transition:transform .08s ease, background .12s, border-color .12s;
+}
+.countBtn:active{transform:scale(.94);}
+.countBtn.on{
+  background:var(--rosado); border-color:var(--rosado); color:#fff;
+  box-shadow:0 3px 0 rgba(0,0,0,.25);
+}
+
 .preview{
   font-size:clamp(12px, 2.2vw, 14px); font-weight:700; opacity:.9;
   background:rgba(251,246,234,.08); border-radius:12px; padding:8px 14px;
@@ -13065,9 +13093,14 @@ body{margin:0;}
   position:absolute; top:50%; transform:translateY(-50%);
   display:flex; flex-direction:column; align-items:center; gap:4px;
   font-weight:800; font-size:clamp(11px, 2vw, 14px); letter-spacing:1px;
-  text-transform:uppercase; opacity:.55; pointer-events:none;
-  transition:opacity .15s;
+  text-transform:uppercase; opacity:.55;
+  transition:opacity .15s, background .15s, transform .15s;
+  background:none; border:2px solid transparent; border-radius:18px;
+  padding:14px 10px; cursor:pointer; font-family:'Nunito', sans-serif;
 }
+.sideHint:hover:not(:disabled){opacity:.85; background:rgba(251,246,234,.08);}
+.sideHint:active:not(:disabled){transform:translateY(-50%) scale(.92);}
+.sideHint:disabled{cursor:default;}
 .sideHint .arrow{font-size:clamp(22px, 4vw, 32px); font-family:'Baloo 2',sans-serif;}
 .sideHint.left{left:3vw; color:var(--rosado);}
 .sideHint.right{right:3vw; color:var(--verde);}
@@ -13083,6 +13116,7 @@ body{margin:0;}
   box-shadow:0 14px 30px rgba(0,0,0,.4);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   color:var(--ink); user-select:none; cursor:grab; touch-action:none;
+  -webkit-user-drag:none; user-drag:none;
   overflow:hidden;
 }
 .card:active{cursor:grabbing;}
@@ -13153,16 +13187,21 @@ body{margin:0;}
   .rotate .phone{animation:none; transform:rotate(90deg);}
 }
 `;
+  var DEFAULT_CONSONANTS = ["b", "d", "f", "l", "m", "n", "p", "s", "t"];
+  var COUNT_OPTIONS = [30, 50, 75, 100, "todas"];
   function SilabasSwipe() {
     const [phase, setPhase] = (0, import_react.useState)("setup");
-    const [selected, setSelected] = (0, import_react.useState)(() => new Set(VOWELS));
+    const [selected, setSelected] = (0, import_react.useState)(
+      () => /* @__PURE__ */ new Set([...VOWELS, ...DEFAULT_CONSONANTS])
+    );
     const [sounds, setSounds] = (0, import_react.useState)({
-      cHard: false,
+      cHard: true,
       cSoft: false,
-      gHard: false,
+      gHard: true,
       gSoft: false,
       qu: false
     });
+    const [cardLimit, setCardLimit] = (0, import_react.useState)("todas");
     const [deck, setDeck] = (0, import_react.useState)([]);
     const [mastered, setMastered] = (0, import_react.useState)(0);
     const [reviews, setReviews] = (0, import_react.useState)(0);
@@ -13191,7 +13230,9 @@ body{margin:0;}
     const chosenConsonants = CONSONANTS.filter((c) => selected.has(c));
     const previewSyllables = buildSyllables(chosenConsonants, chosenVowels, sounds);
     const previewWords = buildWords(selected, sounds);
-    const canStart = previewSyllables.length + previewWords.length > 0;
+    const totalAvailable = previewSyllables.length + previewWords.length;
+    const canStart = totalAvailable > 0;
+    const effectiveCount = cardLimit === "todas" ? totalAvailable : Math.min(cardLimit, totalAvailable);
     const startGame = () => {
       const items = [
         ...previewSyllables.map((s, i) => ({
@@ -13201,7 +13242,11 @@ body{margin:0;}
         })),
         ...previewWords.map((w, i) => ({ id: "w" + i, text: w, type: "palabra" }))
       ];
-      setDeck(shuffle(items));
+      let deckItems = shuffle(items);
+      if (cardLimit !== "todas") {
+        deckItems = deckItems.slice(0, cardLimit);
+      }
+      setDeck(deckItems);
       setMastered(0);
       setReviews(0);
       setHistory([]);
@@ -13254,24 +13299,44 @@ body{margin:0;}
       },
       [advance]
     );
+    const dxRef = (0, import_react.useRef)(0);
+    const [dragging, setDragging] = (0, import_react.useState)(false);
     const onPointerDown = (e) => {
-      var _a, _b;
       if (anim) return;
+      e.preventDefault();
       dragRef.current = { active: true, startX: e.clientX };
-      (_b = (_a = e.currentTarget).setPointerCapture) == null ? void 0 : _b.call(_a, e.pointerId);
+      dxRef.current = 0;
+      setDragging(true);
     };
-    const onPointerMove = (e) => {
-      if (!dragRef.current.active || anim) return;
-      setDx(e.clientX - dragRef.current.startX);
-    };
-    const onPointerUp = () => {
-      if (!dragRef.current.active || anim) return;
-      dragRef.current.active = false;
-      const threshold = Math.min(window.innerWidth * 0.18, 130);
-      if (dx > threshold) finishSwipe("right");
-      else if (dx < -threshold) finishSwipe("left");
-      else setDx(0);
-    };
+    (0, import_react.useEffect)(() => {
+      if (!dragging) return;
+      const handleMove = (e) => {
+        if (!dragRef.current.active) return;
+        const newDx = e.clientX - dragRef.current.startX;
+        dxRef.current = newDx;
+        setDx(newDx);
+      };
+      const endDrag = () => {
+        if (!dragRef.current.active) return;
+        dragRef.current.active = false;
+        const threshold = Math.min(window.innerWidth * 0.18, 130);
+        const finalDx = dxRef.current;
+        setDragging(false);
+        if (finalDx > threshold) finishSwipe("right");
+        else if (finalDx < -threshold) finishSwipe("left");
+        else setDx(0);
+      };
+      window.addEventListener("pointermove", handleMove);
+      window.addEventListener("pointerup", endDrag);
+      window.addEventListener("pointercancel", endDrag);
+      window.addEventListener("blur", endDrag);
+      return () => {
+        window.removeEventListener("pointermove", handleMove);
+        window.removeEventListener("pointerup", endDrag);
+        window.removeEventListener("pointercancel", endDrag);
+        window.removeEventListener("blur", endDrag);
+      };
+    }, [dragging, finishSwipe]);
     (0, import_react.useEffect)(() => {
       if (phase !== "play" && phase !== "done") return;
       const onKey = (e) => {
@@ -13289,7 +13354,7 @@ body{margin:0;}
     const offX = anim === "right" ? window.innerWidth : anim === "left" ? -window.innerWidth : dx;
     const cardStyle = {
       transform: `translateX(${offX}px) rotate(${anim ? anim === "right" ? 18 : -18 : rot}deg)`,
-      transition: anim ? "transform .22s ease-in" : dragRef.current.active ? "none" : "transform .18s ease"
+      transition: anim ? "transform .22s ease-in" : dragging ? "none" : "transform .18s ease"
     };
     const litRight = dx > 40 || anim === "right";
     const litLeft = dx < -40 || anim === "left";
@@ -13327,15 +13392,42 @@ body{margin:0;}
       },
       g.label,
       /* @__PURE__ */ import_react.default.createElement("small", null, g.sub)
-    ))), /* @__PURE__ */ import_react.default.createElement("div", { className: "preview" }, previewSyllables.length, " s\xEDlabas \xB7 ", previewWords.length, " palabras", previewSyllables.length > 0 && " \u2014 ej.: " + previewSyllables.slice(0, 6).map((s) => s.text).join(", "), previewWords.length > 0 && " \xB7 " + previewWords.slice(0, 4).join(", ")), /* @__PURE__ */ import_react.default.createElement("button", { className: "startBtn", disabled: !canStart, onClick: startGame }, "\xA1Comenzar! \u2192")), phase === "play" && top && /* @__PURE__ */ import_react.default.createElement("div", { className: "stage" }, /* @__PURE__ */ import_react.default.createElement("div", { className: `sideHint left ${litLeft ? "lit" : ""}` }, /* @__PURE__ */ import_react.default.createElement("span", { className: "arrow" }, "\u2190"), /* @__PURE__ */ import_react.default.createElement("span", null, "Repasar")), /* @__PURE__ */ import_react.default.createElement("div", { className: `sideHint right ${litRight ? "lit" : ""}` }, /* @__PURE__ */ import_react.default.createElement("span", { className: "arrow" }, "\u2192"), /* @__PURE__ */ import_react.default.createElement("span", null, "\xA1Correcto!")), /* @__PURE__ */ import_react.default.createElement("div", { className: "cardWrap" }, deck.length > 1 && /* @__PURE__ */ import_react.default.createElement("div", { className: "cardBehind" }), /* @__PURE__ */ import_react.default.createElement(
+    ))), /* @__PURE__ */ import_react.default.createElement("div", { className: "groupLabel" }, "\xBFCu\xE1ntas tarjetas?"), /* @__PURE__ */ import_react.default.createElement("div", { className: "letterGrid" }, COUNT_OPTIONS.map((n) => /* @__PURE__ */ import_react.default.createElement(
+      "button",
+      {
+        key: n,
+        className: `countBtn ${cardLimit === n ? "on" : ""}`,
+        onClick: () => setCardLimit(n)
+      },
+      n === "todas" ? "Todas" : n
+    ))), /* @__PURE__ */ import_react.default.createElement("div", { className: "preview" }, previewSyllables.length, " s\xEDlabas \xB7 ", previewWords.length, " palabras", " \u2014 ", "usar\xE1s ", /* @__PURE__ */ import_react.default.createElement("strong", null, effectiveCount), previewSyllables.length > 0 && " \xB7 ej.: " + previewSyllables.slice(0, 6).map((s) => s.text).join(", "), previewWords.length > 0 && " \xB7 " + previewWords.slice(0, 4).join(", ")), /* @__PURE__ */ import_react.default.createElement("button", { className: "startBtn", disabled: !canStart, onClick: startGame }, "\xA1Comenzar! \u2192")), phase === "play" && top && /* @__PURE__ */ import_react.default.createElement("div", { className: "stage" }, /* @__PURE__ */ import_react.default.createElement(
+      "button",
+      {
+        type: "button",
+        className: `sideHint left ${litLeft ? "lit" : ""}`,
+        onClick: () => !anim && finishSwipe("left"),
+        disabled: !!anim,
+        "aria-label": "Repasar esta tarjeta"
+      },
+      /* @__PURE__ */ import_react.default.createElement("span", { className: "arrow" }, "\u2190"),
+      /* @__PURE__ */ import_react.default.createElement("span", null, "Repasar")
+    ), /* @__PURE__ */ import_react.default.createElement(
+      "button",
+      {
+        type: "button",
+        className: `sideHint right ${litRight ? "lit" : ""}`,
+        onClick: () => !anim && finishSwipe("right"),
+        disabled: !!anim,
+        "aria-label": "Marcar como correcta"
+      },
+      /* @__PURE__ */ import_react.default.createElement("span", { className: "arrow" }, "\u2192"),
+      /* @__PURE__ */ import_react.default.createElement("span", null, "\xA1Correcto!")
+    ), /* @__PURE__ */ import_react.default.createElement("div", { className: "cardWrap" }, deck.length > 1 && /* @__PURE__ */ import_react.default.createElement("div", { className: "cardBehind" }), /* @__PURE__ */ import_react.default.createElement(
       "div",
       {
         className: "card",
         style: cardStyle,
-        onPointerDown,
-        onPointerMove,
-        onPointerUp,
-        onPointerCancel: onPointerUp
+        onPointerDown
       },
       /* @__PURE__ */ import_react.default.createElement("div", { className: "tejidoTop" }),
       /* @__PURE__ */ import_react.default.createElement("div", { className: "tipo" }, top.type),
