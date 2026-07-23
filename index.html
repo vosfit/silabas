@@ -12760,12 +12760,26 @@
     {
       key: "animal",
       label: "animal",
-      words: ["oso", "osa", "pato", "pata", "mono"]
+      words: [
+        "oso",
+        "osa",
+        "pez",
+        "pato",
+        "pata",
+        "mono",
+        "conejo",
+        "pajaro"
+      ]
     },
     {
       key: "objeto",
       label: "objeto",
       words: [
+        "ojo",
+        "luz",
+        "mar",
+        "oro",
+        "voz",
         "mesa",
         "casa",
         "sopa",
@@ -12865,28 +12879,89 @@
         "maza",
         "nena",
         "pana",
-        "peso"
+        "peso",
+        "zapato",
+        "camino",
+        "cocina",
+        "pelota",
+        "maleta",
+        "espejo",
+        "sombra",
+        "camisa",
+        "regalo",
+        "sabana",
+        "caba\xF1a",
+        "pi\xF1ata"
       ]
     },
     {
       key: "comida",
       label: "comida",
-      words: ["pan", "sopa", "tuna"]
+      words: ["pan", "col", "uva", "sopa", "tuna", "tomate", "sandia", "banana"]
     },
     {
       key: "accion",
       label: "acci\xF3n",
-      words: ["usa", "pasa", "pesa", "bebe", "toma", "leo", "amo"]
+      words: [
+        "usa",
+        "pasa",
+        "pesa",
+        "bebe",
+        "toma",
+        "leo",
+        "amo",
+        "camina",
+        "regala",
+        "saluda"
+      ]
     },
     {
       key: "frecuente",
       label: "frecuente",
-      words: ["la", "el", "los", "las", "un", "una", "de", "no", "me", "te", "mi", "tu", "se", "si", "al", "lo", "le"]
+      words: [
+        "la",
+        "el",
+        "los",
+        "las",
+        "un",
+        "una",
+        "de",
+        "no",
+        "me",
+        "te",
+        "mi",
+        "tu",
+        "se",
+        "si",
+        "al",
+        "lo",
+        "le",
+        "ya",
+        "ve",
+        "da",
+        "vi"
+      ]
     },
     {
       key: "practica",
       label: "pr\xE1ctica",
-      words: ["oso", "osa", "sol", "sal", "pan", "pie", "ala", "amo", "leo", "ola", "uno", "usa"]
+      words: [
+        "oso",
+        "osa",
+        "sol",
+        "sal",
+        "pan",
+        "pie",
+        "ala",
+        "amo",
+        "leo",
+        "ola",
+        "uno",
+        "usa",
+        "rey",
+        "paz",
+        "a\xF1o"
+      ]
     }
   ];
   var ALL_WORDS = (() => {
@@ -13226,6 +13301,7 @@ html,body{
 `;
   var DEFAULT_CONSONANTS = ["b", "d", "f", "l", "m", "n", "p", "s", "t"];
   var COUNT_OPTIONS = [30, 50, 75, 100, "todas"];
+  var LENGTH_OPTIONS = [2, 3, 4, 6];
   function SilabasSwipe() {
     const [phase, setPhase] = (0, import_react.useState)("setup");
     const [selected, setSelected] = (0, import_react.useState)(
@@ -13239,6 +13315,7 @@ html,body{
       qu: false
     });
     const [cardLimit, setCardLimit] = (0, import_react.useState)("todas");
+    const [maxLen, setMaxLen] = (0, import_react.useState)(4);
     const [deck, setDeck] = (0, import_react.useState)([]);
     const [mastered, setMastered] = (0, import_react.useState)(0);
     const [reviews, setReviews] = (0, import_react.useState)(0);
@@ -13265,8 +13342,10 @@ html,body{
     };
     const chosenVowels = VOWELS.filter((v) => selected.has(v));
     const chosenConsonants = CONSONANTS.filter((c) => selected.has(c));
-    const previewSyllables = buildSyllables(chosenConsonants, chosenVowels, sounds);
-    const previewWords = buildWords(selected, sounds);
+    const previewSyllables = buildSyllables(chosenConsonants, chosenVowels, sounds).filter(
+      (s) => s.text.length <= maxLen
+    );
+    const previewWords = buildWords(selected, sounds).filter((w) => w.text.length <= maxLen);
     const totalAvailable = previewSyllables.length + previewWords.length;
     const canStart = totalAvailable > 0;
     const effectiveCount = cardLimit === "todas" ? totalAvailable : Math.min(cardLimit, totalAvailable);
@@ -13433,6 +13512,14 @@ html,body{
       },
       g.label,
       /* @__PURE__ */ import_react.default.createElement("small", null, g.sub)
+    ))), /* @__PURE__ */ import_react.default.createElement("div", { className: "groupLabel" }, "\xBFCu\xE1ntas letras por palabra?"), /* @__PURE__ */ import_react.default.createElement("div", { className: "letterGrid" }, LENGTH_OPTIONS.map((n) => /* @__PURE__ */ import_react.default.createElement(
+      "button",
+      {
+        key: n,
+        className: `countBtn ${maxLen === n ? "on" : ""}`,
+        onClick: () => setMaxLen(n)
+      },
+      n
     ))), /* @__PURE__ */ import_react.default.createElement("div", { className: "groupLabel" }, "\xBFCu\xE1ntas tarjetas?"), /* @__PURE__ */ import_react.default.createElement("div", { className: "letterGrid" }, COUNT_OPTIONS.map((n) => /* @__PURE__ */ import_react.default.createElement(
       "button",
       {
